@@ -11,14 +11,14 @@ const Display = (props) => {
           <h1>{dog.name}</h1>
           <h3>{dog.age}</h3>
           <button onClick={() => {
-            props.selectDog(dog)        // when button is clicked, the dog is passed into selectDog function - changes the state in App. 
+            props.selectDog(dog)        
             props.history.push("/edit")
           }}>
             Edit
           </button>
 
            <button onClick={() => {
-            props.deleteDog(dog)        // when button is clicked, the dog is passed into deleteDog function - deleted via fetch call 
+            props.deleteDog(dog)        
           }}>
             Delete
           </button>
@@ -33,3 +33,8 @@ const Display = (props) => {
 };
 
 export default Display;
+
+
+
+// when button is clicked, the dog is passed into selectDog function - changes the state in App. 
+// when button is clicked, the dog is passed into deleteDog function - deleted via fetch call 
