@@ -1,14 +1,14 @@
 import React from "react";
 
-const Display = (props) => {
+const Form = (props) => {
   //STATE FOR THE FORM
-  const [formData, setFormData] = React.useEffect(props.dog);
+  const [formData, setFormData] = React.useState(props.dog);
 
   //FUNCTIONS
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevent Form from Refreshing
     props.handleSubmit(formData); // Submit to Parents desired function
-    props.history.push("/"); //Push back to display page
+    props.history.push("/"); // Push back to display page on main page "/"
   };
 
   const handleChange = (event) => {
@@ -16,7 +16,8 @@ const Display = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+   // event listener, listening for submit 
+     <form onSubmit={handleSubmit}>   
       <input
         type="text"
         name="name"
@@ -40,4 +41,4 @@ const Display = (props) => {
   );
 };
 
-export default Display;
+export default Form;
