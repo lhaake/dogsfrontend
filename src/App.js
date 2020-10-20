@@ -88,16 +88,16 @@ const deleteDog = (dog) => {
           <Route
             exact
             path="/create"
-            render={(rp) => (
+            render={(rp) => 
               <Form {...rp} label="create" dog={emptyDog} handleSubmit={handleCreate} />
-            )}
+            }
           />
           <Route
             exact
             path="/edit"
-            render={(rp) => (
+            render={(rp) => 
               <Form {...rp} label="update" dog={selectedDog} handleSubmit={handleUpdate} />
-            )}
+            }
           />
         </Switch>
       </main>
